@@ -1,6 +1,3 @@
-### Demo
-[View Demo](https://ninjacodegen.github.io/ncg-crud-ngx-bs/)
-
 <div style="text-align: center;">
   <h4>Admin List View</h4>
   <img src="./src/assets/admin-list-view.png" align="center" height="400" width="550" />
