@@ -1,0 +1,125 @@
+<div *ngIf="item && myForm" formToInject>
+  <form (ngSubmit)="onSubmit()" [formGroup]="myForm" novalidate>
+    <!--id - integer-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['id']?.invalid && (myForm.controls['id'].touched || isSubmitAttempted)}">
+      <input id="idInput" #idInput [placeholder]="formMetaData.properties.id['x-ncg'].label" formControlName="id" type="number" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.id['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--address - string-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['address']?.invalid && (myForm.controls['address'].touched || isSubmitAttempted)}">
+      <input id="addressInput" #addressInput formControlName="address" type="text" [placeholder]="formMetaData.properties.address['x-ncg'].label" class="form-control"/>
+      <div *ngFor="let error of formMetaData.properties.address['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--age - integer-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['age']?.invalid && (myForm.controls['age'].touched || isSubmitAttempted)}">
+      <input id="ageInput" #ageInput [placeholder]="formMetaData.properties.age['x-ncg'].label" formControlName="age" type="number" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.age['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--createdBy - integer-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['createdBy']?.invalid && (myForm.controls['createdBy'].touched || isSubmitAttempted)}">
+      <input id="createdByInput" #createdByInput [placeholder]="formMetaData.properties.createdBy['x-ncg'].label" formControlName="createdBy" type="number" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.createdBy['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--createdDate - string-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['createdDate']?.invalid && (myForm.controls['createdDate'].touched || isSubmitAttempted)}">
+      <input id="createdDateInput" #createdDateInput [placeholder]="formMetaData.properties.createdDate['x-ncg'].label" formControlName="createdDate" type="date" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.createdDate['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--emailAddress - string-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['emailAddress']?.invalid && (myForm.controls['emailAddress'].touched || isSubmitAttempted)}">
+      <input id="emailAddressInput" #emailAddressInput formControlName="emailAddress" type="text" [placeholder]="formMetaData.properties.emailAddress['x-ncg'].label" class="form-control"/>
+      <div *ngFor="let error of formMetaData.properties.emailAddress['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--gender - integer-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['gender']?.invalid && (myForm.controls['gender'].touched || isSubmitAttempted)}">
+      <input id="genderInput" #genderInput [placeholder]="formMetaData.properties.gender['x-ncg'].label" formControlName="gender" type="number" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.gender['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--isActive - boolean-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['isActive']?.invalid && (myForm.controls['isActive'].touched || isSubmitAttempted)}">
+      <input id="' + propKey + 'Input" #isActiveInput formControlName="isActive" type="checkbox" name="isActive_checkbox" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.isActive['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--name - string-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['name']?.invalid && (myForm.controls['name'].touched || isSubmitAttempted)}">
+      <input id="nameInput" #nameInput formControlName="name" type="text" [placeholder]="formMetaData.properties.name['x-ncg'].label" class="form-control"/>
+      <div *ngFor="let error of formMetaData.properties.name['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--password - string-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['password']?.invalid && (myForm.controls['password'].touched || isSubmitAttempted)}">
+      <input id="passwordInput" #passwordInput formControlName="password" type="text" [placeholder]="formMetaData.properties.password['x-ncg'].label" class="form-control"/>
+      <div *ngFor="let error of formMetaData.properties.password['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--phone - string-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['phone']?.invalid && (myForm.controls['phone'].touched || isSubmitAttempted)}">
+      <input id="phoneInput" #phoneInput formControlName="phone" type="text" [placeholder]="formMetaData.properties.phone['x-ncg'].label" class="form-control"/>
+      <div *ngFor="let error of formMetaData.properties.phone['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--reOrderLevel - integer-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['reOrderLevel']?.invalid && (myForm.controls['reOrderLevel'].touched || isSubmitAttempted)}">
+      <input id="reOrderLevelInput" #reOrderLevelInput [placeholder]="formMetaData.properties.reOrderLevel['x-ncg'].label" formControlName="reOrderLevel" type="number" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.reOrderLevel['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--tenant - -->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['tenant']?.invalid && (myForm.controls['tenant'].touched || isSubmitAttempted)}">
+      <input id="tenantInput" #tenantInput formControlName="tenant" type="text" [placeholder]="formMetaData.properties.tenant['x-ncg'].label" class="form-control"/>
+      <div *ngFor="let error of formMetaData.properties.tenant['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--tenantId - integer-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['tenantId']?.invalid && (myForm.controls['tenantId'].touched || isSubmitAttempted)}">
+      <input id="tenantIdInput" #tenantIdInput [placeholder]="formMetaData.properties.tenantId['x-ncg'].label" formControlName="tenantId" type="number" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.tenantId['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--testString - integer-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['testString']?.invalid && (myForm.controls['testString'].touched || isSubmitAttempted)}">
+      <input id="testStringInput" #testStringInput [placeholder]="formMetaData.properties.testString['x-ncg'].label" formControlName="testString" type="number" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.testString['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--uid - string-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['uid']?.invalid && (myForm.controls['uid'].touched || isSubmitAttempted)}">
+      <input id="uidInput" #uidInput formControlName="uid" type="text" [placeholder]="formMetaData.properties.uid['x-ncg'].label" class="form-control"/>
+      <div *ngFor="let error of formMetaData.properties.uid['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--updatedBy - integer-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['updatedBy']?.invalid && (myForm.controls['updatedBy'].touched || isSubmitAttempted)}">
+      <input id="updatedByInput" #updatedByInput [placeholder]="formMetaData.properties.updatedBy['x-ncg'].label" formControlName="updatedBy" type="number" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.updatedBy['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+    <!--updatedDate - string-->
+    <div class="form-group" [ngClass]="{'has-danger': myForm.controls['updatedDate']?.invalid && (myForm.controls['updatedDate'].touched || isSubmitAttempted)}">
+      <input id="updatedDateInput" #updatedDateInput [placeholder]="formMetaData.properties.updatedDate['x-ncg'].label" formControlName="updatedDate" type="date" class="form-control" />
+      <div *ngFor="let error of formMetaData.properties.updatedDate['x-ncg'].errors" class="alert alert-danger">{{ error.message }}</div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="tenantId">Tenant Id</label>
+      <select formControlName="tenantId">
+        <option *ngFor="let opt of tenantList" [value]="opt.id">{{opt.name}}</option>
+      </select>
+    </div>
+
+    <button id="backButton" type="button" class="btn btn-secondary" (click)="goBack()" [attr.aria-label]="back">Back</button>
+    <button id="cancelButton" type="button" class="btn btn-secondary" (click)="onCancel()" [attr.aria-label]="cancel">Cancel</button>
+    <button id="resetButton" type="button" [disabled]="myForm.pristine" class="btn btn-secondary" (click)="onReset()" [attr.aria-label]="reset">Reset</button>
+    <button id="deleteButton" type="button" class="btn btn-danger" (click)="onDelete()" [attr.aria-label]="delete">Delete</button>
+    <button id="submitButton" type="submit" [disabled]="myForm.invalid && isSubmitAttempted" class="btn btn-primary" [attr.aria-label]="submit">Submit</button>
+  </form>
+</div>
