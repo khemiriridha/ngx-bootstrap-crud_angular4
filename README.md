@@ -20,6 +20,11 @@ Install Angular CLI `npm install -g @angular/cli`
 ## Angular CLI
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
+## NinjaCodeGen
+This project was ninjafied with admin/CRUD, core, e2e codes through [NinjaCodeGen](https://ninjaCodeGen.com) ncg-bs template-set version 1.0.0.
+ 
+To get more help on NinjaCodeGen, go check out our [website](https://ninjaCodeGen.com), [facebook](https://facebook.com/ninjaCodeGen), [twitter](https://twitter.com/ninjaCodeGen), [youtube](https://youtube.com/ninjaCodeGen).
+
 ## Built-with
 - [Bootstrap 4](https://v4-alpha.getbootstrap.com/)
 - [ngx-bootstrap](http://valor-software.com/ngx-bootstrap/#/)
@@ -27,7 +32,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. 
+Run `ng serve` for a dev server. Navigate to `http://localhost:4202/`. The app will automatically reload if you change any of the source files.
  
 ## Code scaffolding
  
